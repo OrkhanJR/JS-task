@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="/task2/task.css" />
+    <link rel="stylesheet" href="/task2/prism.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">TASK 7</h1>
+
+      <div class="conditions">
+        <p class="text">
+            The shipping service accepts only orders that meet the following conditions as a small shipment:
+            - The sum of the length, width and height of an item does not exceed 150cm;
+            - None of the measurements exceed 100cm;
+            - The weight of the shipment does not exceed 10 kg;
+            - Delivery distance is in the range of 3 to 10km.
+            Write a function that will receive data from the user about the shipment and report whether it is small.
+            
+        </p>
+        <pre class="language-javascript">
+            <code>
+              function isSmallShipment() {
+                const length = +prompt("Enter the length of the item in cm:");
+                const width = +prompt("Enter the width of the item in cm:");
+                const height = +prompt("Enter the height of the item in cm:");
+                const weight = +prompt("Enter the weight of the shipment in kg:");
+                const distance = +prompt("Enter the delivery distance in km:");
+              
+                if (length + width + height > 150) {
+                  alert("This shipment is not small: the sum of length, width, and height exceeds 150cm.");
+                }
+                if (length > 100 || width > 100 || height > 100) {
+                  alert("This shipment is not small: one or more dimensions exceeds 100cm.");
+                }
+                if (weight > 10) {
+                  alert("This shipment is not small: the weight exceeds 10kg.");
+                }
+                if (distance < 3 || distance > 10) {
+                 alert("the delivery distance is not within the range of 3 to 10km.");
+                }
+              
+                else {
+                  alert("This shipment is small.");
+                }
+                
+              }
+            </code>
+        </pre>
+      </div>
+      <div class="button">
+        <button class="custom-btn btn-5" onclick="isSmallShipment()"><span>Check</span></button>
+      </div>
+      <ul class="pages">
+        <nav class="pagination-container">
+          <div class="pagination">
+            <span class="pagination-inner">
+              <a href="/task1/index.html">1</a>
+              <a href="/task2/index.html">2</a>
+              <a href="/task3/index.html">3</a>
+              <a href="/task4/index.html">4</a>
+              <a href="/task5/index.html">5</a>
+              <a href="/task6/index.html">6</a>
+              <a class="pagination-active" href="/task7/index.html">7</a>
+              <a href="/task8/index.html">8</a>
+              <a href="/task9/index.html">9</a>
+              <a href="/task10/index.html">10</a>
+              <a href="/task11/index.html">11</a>
+              <a href="/task12/index.html">12</a>
+              <a href="/task13/index.html">13</a>
+            </span>
+          </div>
+        </nav>
+      </ul>
+    </div>
+  </body>
+  <script src="/task7/prism.js"></script>
+  <script src="/task7/task7.js"></script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="/task2/task.css" />
+    <link rel="stylesheet" href="/task2/prism.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">TASK 6</h1>
+
+      <div class="conditions">
+        <p class="text">
+          The shop stores the following information about customers: - Name; -
+          Age; - The number of orders; - Amounts of orders. The store offers a
+          discount to regular customers and customers over 60 years of age. A
+          customer is considered a regular if he or she made 4 or more orders
+          with a total amount of 100 AZN or more. Write a function that will
+          receive customer’s data as input and return information whether the
+          customer receives a discount or not.
+        </p>
+        <pre class="language-javascript">
+            <code>
+              function checkDiscount(name, age, numOrders, orderAmounts) {
+                const totalAmount = orderAmounts.reduce((sum, amount) => sum + amount, 0);
+                const isRegular = numOrders >= 4 && totalAmount >= 100;
+                const isSenior = age >= 60;
+              
+                if (isRegular || isSenior) {
+                  return `${name} is eligible for a discount.`;
+                } else {
+                  return `${name} is not eligible for a discount.`;
+                }
+              }
+              
+              
+            </code>
+        </pre>
+      </div>
+      <div class="button">
+        <button class="custom-btn btn-5" onclick="nothingToCheck()"><span>Check</span></button>
+      </div>
+      <ul class="pages">
+        <nav class="pagination-container">
+          <div class="pagination">
+            <span class="pagination-inner">
+              <a href="/task1/index.html">1</a>
+              <a href="/task2/index.html">2</a>
+              <a href="/task3/index.html">3</a>
+              <a href="/task4/index.html">4</a>
+              <a href="/task5/index.html">5</a>
+              <a class="pagination-active" href="/task6/index.html">6</a>
+              <a href="/task7/index.html">7</a>
+              <a href="/task8/index.html">8</a>
+              <a href="/task9/index.html">9</a>
+              <a href="/task10/index.html">10</a>
+              <a href="/task11/index.html">11</a>
+              <a href="/task12/index.html">12</a>
+              <a href="/task13/index.html">13</a>
+            </span>
+          </div>
+        </nav>
+      </ul>
+    </div>
+  </body>
+  <script src="/task6/prism.js"></script>
+  <script src="/task6/task6.js"></script>
+</html>

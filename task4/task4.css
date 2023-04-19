@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+html {
+  width: auto;
+  height: auto;
+}
+
+body {
+  background-color: gray;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  @import url("https://fonts.googleapis.com/css?family=Roboto:400,300");
+}
+.container body {
+  color: #2c3e50;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.container .pagination-container {
+  margin: 10px auto;
+  text-align: center;
+}
+.container .pagination-container .pagination {
+  position: relative;
+}
+.container .pagination-container .pagination a {
+  position: relative;
+  display: inline-block;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 16px 10px;
+}
+.container .pagination-container .pagination a:before {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #2c3e50;
+  border-radius: 24px;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+.container .pagination-container .pagination a:hover, .container .pagination-container .pagination a.pagination-active {
+  color: #fff;
+}
+.container .pagination-container .pagination a:hover:before, .container .pagination-container .pagination a.pagination-active:before {
+  transform: scale(1);
+}
+.container .pagination-container .pagination.pagination-active {
+  color: #fff;
+}
+.container .pagination-container .pagination.pagination-active:before {
+  transform: scale(1);
+}
+.container .pagination-container .pagination.pagination-newer {
+  margin-right: 50px;
+}
+.container .pagination-container .pagination.pagination-older {
+  margin-left: 50px;
+}
+.container .title {
+  display: flex;
+  justify-content: center;
+  color: orange;
+}
+.container .pages {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+}
+.container .pages a {
+  text-decoration: none;
+  color: black;
+}
+.container .conditions {
+  margin-top: 3%;
+}
+.container .conditions .text {
+  width: 35%;
+  color: whitesmoke;
+  margin-left: 5%;
+}
+.container .button {
+  display: flex;
+  justify-content: center;
+}
+.container .button .custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.container .button .custom-btn.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255, 27, 0);
+  background: linear-gradient(0deg, rgb(255, 27, 0) 0%, rgb(251, 75, 2) 100%);
+}
+.container .button .custom-btn.btn-5:hover {
+  color: #f0094a;
+  background: transparent;
+  box-shadow: none;
+}
+.container .button .custom-btn.btn-5:before, .container .button .custom-btn.btn-5:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #f0094a;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.1333333333);
+  transition: 400ms ease all;
+}
+.container .button .custom-btn.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.container .button .custom-btn.btn-5:hover:before, .container .button .custom-btn.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}/*# sourceMappingURL=task4.css.map */

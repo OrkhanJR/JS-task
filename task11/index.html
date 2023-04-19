@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="/task2/task.css" />
+    <link rel="stylesheet" href="/task2/prism.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">TASK 11</h1>
+
+      <div class="conditions">
+        <p class="text">
+          The coffee house has a complex system for giving loyalty points to
+          regular customers: For the first two orders, 1 point is awarded. For
+          the next - the sum of the two previous ones. For example, here are the
+          points that will be given for the first 8 orders: 1, 1, 2, 3, 5, 8,
+          13, 21. Write a function that will receive a number from the user (the
+          order number) and will return the number of loyalty points to be
+          given.
+        </p>
+        <pre class="language-javascript">
+            <code>
+              function calculateLoyaltyPoints(orderNumber) {
+                if (orderNumber < 1) {
+                  return 0;
+                } else if (orderNumber === 1 || orderNumber === 2) {
+                  return 1;
+                } else {
+                  let prev1 = 1;
+                  let prev2 = 1;
+                  let points = 0;
+              
+                  for (let i = 3; i <= orderNumber; i++) {
+                    points = prev1 + prev2;
+              
+                    prev2 = prev1;
+                    prev1 = points;
+                  }
+              
+                  return points;
+                }
+              }
+            </code>
+        </pre>
+      </div>
+      <div class="button">
+        <button class="custom-btn btn-5" onclick="dontHaveTime()"><span>Check</span></button>
+      </div>
+      <ul class="pages">
+        <nav class="pagination-container">
+          <div class="pagination">
+            <span class="pagination-inner">
+              <a href="/task1/index.html">1</a>
+              <a href="/task2/index.html">2</a>
+              <a href="/task3/index.html">3</a>
+              <a href="/task4/index.html">4</a>
+              <a href="/task5/index.html">5</a>
+              <a href="/task6/index.html">6</a>
+              <a href="/task7/index.html">7</a>
+              <a href="/task8/index.html">8</a>
+              <a href="/task9/index.html">9</a>
+              <a href="/task10/index.html">10</a>
+              <a class="pagination-active" href="/task11/index.html">11</a>
+              <a href="/task12/index.html">12</a>
+              <a href="/task13/index.html">13</a>
+            </span>
+          </div>
+        </nav>
+      </ul>
+    </div>
+  </body>
+  <script src="/task7/prism.js"></script>
+  <script src="/task11/task11.js"></script>
+</html>

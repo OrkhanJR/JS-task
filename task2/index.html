@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="/task2/task.css" />
+    <link rel="stylesheet" href="/task2/prism.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">TASK 2</h1>
+
+      <div class="conditions">
+        <p class="text">
+          The courier service delivers at a single rate: 5 AZN fixed + 0.25 AZN
+          for each kilometer of the road. Write a function that will prompt the
+          user for the distance in km and return the cost of delivery.
+        </p>
+        <pre class="language-javascript">
+            <code>
+let price = 5;
+let costPerKm = 0.25;
+let distance = prompt('please write a distance in km');
+
+const deliveryCost = price + costPerKm * distance;
+
+alert(`The cost of delivery is ${deliveryCost} AZN.`)
+            </code>
+        </pre>
+      </div>
+      <div class="button">
+        <button class="custom-btn btn-5" onclick="task2()"><span>Check</span></button>
+      </div>
+      <ul class="pages">
+        <nav class="pagination-container">
+          <div class="pagination">
+            <span class="pagination-inner">
+              <a href="/task1/index.html">1</a>
+              <a class="pagination-active" href="/task2/index.html">2</a>
+              <a href="/task3/index.html">3</a>
+              <a href="/task4/index.html">4</a>
+              <a href="/task5/index.html">5</a>
+              <a href="/task6/index.html">6</a>
+              <a href="/task7/index.html">7</a>
+              <a href="/task8/index.html">8</a>
+              <a href="/task9/index.html">9</a>
+              <a href="/task10/index.html">10</a>
+              <a href="/task11/index.html">11</a>
+              <a href="/task12/index.html">12</a>
+              <a href="/task13/index.html">13</a>
+            </span>
+          </div>
+        </nav>
+      </ul>
+    </div>
+  </body>
+  <script src="/task2/prism.js"></script>
+  <script src="/task2/task2.js"></script>
+</html>

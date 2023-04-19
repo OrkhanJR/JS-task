@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="/task2/task.css" />
+    <link rel="stylesheet" href="/task2/prism.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">TASK 3</h1>
+      
+
+      <div class="conditions">
+        <p class="text">
+            Each product in the online store receipt is described by the following values:
+            - Name;
+            - Unit price;
+            - Quantity;
+            - Participates in the promotion (yes/no).
+            Write a function that receives the listed values and calculates the receipt’s amount according to the following rules:
+            - If the quantity of the product is greater than or equal to 5, then a 10% discount is applied to the product. 
+            - If the product participates in the promotion, a 15% discount is applied.
+            Discounts may be cumulative.
+            
+        </p>
+        <pre class="language-javascript">
+            <code>
+              function calculateReceiptAmount(name, unitPrice, quantity, participatesInPromotion) {
+                let discount = 0;
+                let totalAmount = unitPrice * quantity;
+              
+                if (quantity >= 5) {
+                  discount += 0.1;
+                }
+              
+                if (participatesInPromotion) {
+                  discount += 0.15;
+                }
+              
+                const discountedAmount = totalAmount - (totalAmount * discount);
+                
+                return discountedAmount;
+              }
+              
+            </code>
+        </pre>
+      </div>
+      <div class="button">
+        <button class="custom-btn btn-5" onclick="nothingToCheck()"><span>Check</span></button>
+      </div>
+      <ul class="pages">
+        <nav class="pagination-container">
+          <div class="pagination">
+            <span class="pagination-inner">
+              <a href="/task1/index.html">1</a>
+              <a href="/task2/index.html">2</a>
+              <a class="pagination-active" href="/task3/index.html">3</a>
+              <a href="/task4/index.html">4</a>
+              <a href="/task5/index.html">5</a>
+              <a href="/task6/index.html">6</a>
+              <a href="/task7/index.html">7</a>
+              <a href="/task8/index.html">8</a>
+              <a href="/task9/index.html">9</a>
+              <a href="/task10/index.html">10</a>
+              <a href="/task11/index.html">11</a>
+              <a href="/task12/index.html">12</a>
+              <a href="/task13/index.html">13</a>
+            </span>
+          </div>
+        </nav>
+      </ul>
+    </div>
+  </body>
+  <script src="/task3/prism.js"></script>
+  <script src="/task3/task3.js"></script>
+</html>
